@@ -37,6 +37,16 @@ class AuthController extends Controller
     {
         return view('layouts.first');
     }
+
+    protected function getregistro()
+    {
+        return view('login.registro');
+    }
+
+    protected function getLogin()
+    {
+        return view('login.login');
+    }    
     /**
      * Get a validator for an incoming registration request.
      *

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class InstalacionesController extends Controller
+class ServiciosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class InstalacionesController extends Controller
      */
     public function index()
     {
-        return view('instalaciones.index');
+        return view('servicios.index');
     }
 
     /**

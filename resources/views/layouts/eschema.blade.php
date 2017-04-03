@@ -18,7 +18,8 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet">
-
+    <link href="js/select2/select2.min.css" rel="stylesheet">
+    <link href="css/table-responsive.css" rel="stylesheet">    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -38,14 +39,14 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Mudate<strong>24</strong></b></a>
+            <a href="Mudate24" class="logo"><b>Mudate<strong>24</strong></b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
                 <ul class="nav top-menu">
                     <!-- settings start -->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="fa fa-tasks"></i>
                             <span class="badge bg-theme">4</span>
                         </a>
@@ -55,7 +56,7 @@
                                 <p class="green">You have 4 pending tasks</p>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="#">
                                     <div class="task-info">
                                         <div class="desc">DashGum Admin Panel</div>
                                         <div class="percent">40%</div>
@@ -68,7 +69,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="#">
                                     <div class="task-info">
                                         <div class="desc">Database Update</div>
                                         <div class="percent">60%</div>
@@ -81,7 +82,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="#">
                                     <div class="task-info">
                                         <div class="desc">Product Development</div>
                                         <div class="percent">80%</div>
@@ -94,7 +95,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="#">
                                     <div class="task-info">
                                         <div class="desc">Payments Sent</div>
                                         <div class="percent">70%</div>
@@ -114,7 +115,7 @@
                     <!-- settings end -->
                     <!-- inbox dropdown start-->
                     <li id="header_inbox_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="fa fa-envelope-o"></i>
                             <span class="badge bg-theme">5</span>
                         </a>
@@ -124,7 +125,7 @@
                                 <p class="green">You have 5 new messages</p>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="#">
                                     <span class="photo"><img alt="avatar" src="img/ui-zac.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Zac Snider</span>
@@ -136,7 +137,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="#">
                                     <span class="photo"><img alt="avatar" src="img/ui-divya.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Divya Manian</span>
@@ -148,7 +149,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="#">
                                     <span class="photo"><img alt="avatar" src="img/ui-danro.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Dan Rogers</span>
@@ -160,7 +161,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">
+                                <a href="#">
                                     <span class="photo"><img alt="avatar" src="img/ui-sherman.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Dj Sherman</span>
@@ -172,7 +173,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">See all messages</a>
+                                <a href="#">See all messages</a>
                             </li>
                         </ul>
                     </li>
@@ -182,7 +183,7 @@
             </div>
             <div class="top-menu">
               <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Ingresar</a></li>
+                    <li><a class="logout" href="login">Ingresar</a></li>
               </ul>
             </div>
         </header>
@@ -192,32 +193,8 @@
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
     <!--sidebar start-->
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              
-                  <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">Nombre del logueado</h5>
-                    
-                  <li class="sub-menu">
-                      <a href="">
-                          <i class="fa fa-sun-o"></i>
-                          <span>Admin de Servicios</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="inmobiliaria"><i class="fa fa-building-o"></i>Inmobiliaria</a></li>
-                          <li><a  href="transporte"><i class="fa fa-cab"></i>Transporte</a></li>
-                          <li><a  href="reparaciones"><i class="fa fa-gavel"></i>Reparaciones</a></li>
-                          <li><a  href="instalaciones"><i class="fa fa-pied-piper-alt"></i>Instalaciones</a></li>
-                          <li><a  href="mudanzas"><i class="fa fa-truck"></i>Mudanzas</a></li>                                                    
-                      </ul>                      
-                  </li>
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
+      @yield('sidebar')
+    <!--sidebar end-->
 
       
       <!-- **********************************************************************************************************************************************************
@@ -232,7 +209,7 @@
       <footer class="site-footer">
           <div class="text-center">
               2017 - Mudate24
-              <a href="blank.html#" class="go-top">
+              <a href="#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
@@ -248,6 +225,7 @@
     <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="js/select2/select2.full.min.js"></script>    
 
 
     <!--common script for all pages-->
@@ -257,11 +235,11 @@
     
   <script>
       //custom select box
-
+/*
       $(function(){
           $('select.styled').customSelect();
       });
-
+*/
   </script>
 
   </body>

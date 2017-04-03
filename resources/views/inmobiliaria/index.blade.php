@@ -1,5 +1,37 @@
 @extends('layouts.eschema')
 
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+  @section('sidebar') 
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+                  <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="60"></a></p>
+                  <h5 class="centered">Nombre del logueado</h5>
+                    
+                  <li class="sub-menu">
+                      <a class="active" href="">
+                          <i class="fa fa-sun-o" ></i>
+                          <span>Admin de Servicios</span>
+                      </a>
+                      <ul class="sub">
+                          <li  class="active"><a  href="inmobiliaria"><i class="fa fa-building-o"></i>Inmobiliaria</a></li>
+                          <li><a  href="servicios"><i class="fa fa-legal"></i>Servicios</a></li>
+                          <li><a  href="mudanzas"><i class="fa fa-truck"></i>Mudanzas</a></li>                                                    
+                      </ul>                      
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+  @parent 
+@endsection  
+
   @section('content') 
 
       
@@ -12,172 +44,194 @@
           	<h3><i class="fa fa-building-o"></i> Inmobiliaria</h3>
           	
           	<!-- BASIC FORM ELELEMNTS -->
-          	<div class="row mt">
+          	
           		<div class="col-lg-12">
                   <div class="form-panel">
-                  	  <h4 class="mb">Formulario de Inmobiliaria</h4>
+                  	  <!--<h4 class="mb">Formulario de Inmobiliaria (http://publicar.tuinmueble.com.ve/fsbo/fsbo?execution=e1s2)</h4>-->
+                      <h4 class="mb">Caracteristicas Principales</h4>
                       <form class="form-horizontal style-form" method="get">
                           <div class="form-group">
-                              <label class="col-sm-2 col-sm-2 control-label">Tipo</label>
+                              <label class="col-sm-2 col-sm-2 control-label">Baños: </label>
                                 <div class="col-sm-3">
                                   <select class="form-control">
+                                    <option>Seleccione...</option>
                                     <option>Venta</option>
                                     <option>Alquiler</option>
                                   </select>
                                 </div>
-                              <label class="col-sm-2 col-sm-2 control-label">Otra cosa al lado</label>
+                              <label class="col-sm-2 col-sm-2 control-label">Habitaciones: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control">
+                                    <option>Seleccione...</option>
+                                    <option>Venta</option>
+                                    <option>Alquiler</option>
+                                  </select>
+                                </div>                                
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Baños de Servicio: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control">
+                                    <option>Seleccione...</option>
+                                    <option>Venta</option>
+                                    <option>Alquiler</option>
+                                  </select>
+                                </div>
+                              <label class="col-sm-2 col-sm-2 control-label">Estacionamientos: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control">
+                                    <option>Seleccione...</option>
+                                    <option>Venta</option>
+                                    <option>Alquiler</option>
+                                  </select>
+                                </div>                                
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Hab. de  Servicio: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control">
+                                    <option>Seleccione...</option>
+                                    <option>Venta</option>
+                                    <option>Alquiler</option>
+                                  </select>
+                                </div>
+                              <label class="col-sm-2 col-sm-2 control-label">Antiguedad: </label>
                                 <div class="col-sm-3">
                                   <input type="text" class="form-control">
                                 </div>                                
+                          </div>                                                    
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Metros Terreno: </label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control">
+                                </div>
+                              <label class="col-sm-2 col-sm-2 control-label">Metros Construcción</label>
+                                <div class="col-sm-3">
+                                  <input type="text" class="form-control">
+                                </div> 
                           </div>
+
+                          <HR><h4 class="mb">Caracteristicas Adicionales</h4>
+
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Líneas Telefónicas: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control">
+                                    <option>Seleccione...</option>
+                                    <option>Venta</option>
+                                    <option>Alquiler</option>
+                                  </select>
+                                </div>
+                              <label class="col-sm-2 col-sm-2 control-label">Cuartos: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control">
+                                    <option>Seleccione...</option>
+                                    <option>Venta</option>
+                                    <option>Alquiler</option>
+                                  </select>
+                                </div>                                
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Áreas Sociales: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control">
+                                    <option>Seleccione...</option>
+                                    <option>Venta</option>
+                                    <option>Alquiler</option>
+                                  </select>
+                                </div>
+                              <label class="col-sm-2 col-sm-2 control-label">Estacionamientos: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control">
+                                    <option>Seleccione...</option>
+                                    <option>Venta</option>
+                                    <option>Alquiler</option>
+                                  </select>
+                                </div>                                 
+                          </div>                                                   
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Caracteristicas Adicionales: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                    <option>Aire Acondicionado</option>
+                                    <option>Calefacción o chimenea</option>
+                                    <option>Cocina Empotrada</option>
+                                    <option>Estudio o Biblioteca</option>
+                                    <option>Jardines</option>
+                                    <option>Planta Electrica</option>
+                                    <option>TV por Cable</option>
+                                    <option>Estacionamiento de Visitantes</option>
+                                    <option>Gimnasio</option>
+                                    <option>Maletero</option>
+                                    <option>Rejas de Seguridad</option>
+                                    <option>Vestier</option>
+                                    <option>Estar</option>
+                                    <option>Jacuzzi</option>
+                                    <option>Piscina</option>
+                                    <option>Sauna</option>
+                                    <option>Vista Panoramica</option>
+                                  </select>
+                                </div>        
+                              <label class="col-sm-2 col-sm-2 control-label">Instalaciones y comodidades: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                    <option>Conjunto Cerrado</option>
+                                    <option>Vigilancia Privada</option>
+                                  </select>
+                                </div>                                                                                   
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">Detalles de Interés: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                    <option>Buena Distribución</option>
+                                    <option>Desocupado</option>
+                                    <option>Excelente ubicación</option>
+                                    <option>Ideal para ejecutivos</option>
+                                    <option>Remodelada</option>
+                                    <option>Zona Tranquila</option>
+                                    <option>Clima de montaña</option>
+                                    <option>Espacioso</option>
+                                    <option>Excelente vista</option>
+                                    <option>Listo para mudarse</option>
+                                    <option>Tipo estudio</option>
+                                    <option>Condominio económico</option>
+                                    <option>Excelente oportunidad</option>
+                                    <option>Fácil acceso</option>
+                                    <option>Muy bonito</option>
+                                    <option>Verlo es comprarlo</option>
+                                  </select>
+                                </div>        
+                              <label class="col-sm-2 col-sm-2 control-label">Cercanías a menos de dos cuadras: </label>
+                                <div class="col-sm-3">
+                                  <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+                                    <option>Abasto</option>
+                                    <option>Estación de metro</option>
+                                    <option>Panadería</option>
+                                    <option>Centro Comercial</option>
+                                    <option>Farmacia</option>
+                                    <option>Supermercado</option>
+                                    <option>Colegio</option>
+                                    <option>Otros negocios</option>                           
+                                  </select>
+                                </div>
+                                                                                                                
+                          </div>
+              <div class="control-group">
+                <label class="control-label" for="fileInput">File input</label>
+                <div class="controls">
+                <input class="input-file uniform_on" id="fileInput" type="file">
+                </div>
+              </div>    
+
+
                       </form>
                   </div>
           		</div><!-- col-lg-12-->      	
-          	</div><!-- /row -->
-          	
-          	<!-- INLINE FORM ELELEMNTS -->
-          	<div class="row mt">
-          		<div class="col-lg-12">
-          			<div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Inline Form</h4>
-                      <form class="form-inline" role="form">
-                          <div class="form-group">
-                              <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-                          </div>
-                          <div class="form-group">
-                              <label class="sr-only" for="exampleInputPassword2">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-                          </div>
-                          <button type="submit" class="btn btn-theme">Sign in</button>
-                      </form>
-          			</div><!-- /form-panel -->
-          		</div><!-- /col-lg-12 -->
-          	</div><!-- /row -->
-          	
-          	<!-- INPUT MESSAGES -->
-          	<div class="row mt">
-          		<div class="col-lg-12">
-          			<div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Input Messages</h4>
-                          <form class="form-horizontal tasi-form" method="get">
-                              <div class="form-group has-success">
-                                  <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Input with success</label>
-                                  <div class="col-lg-10">
-                                      <input type="text" class="form-control" id="inputSuccess">
-                                  </div>
-                              </div>
-                              <div class="form-group has-warning">
-                                  <label class="col-sm-2 control-label col-lg-2" for="inputWarning">Input with warning</label>
-                                  <div class="col-lg-10">
-                                      <input type="text" class="form-control" id="inputWarning">
-                                  </div>
-                              </div>
-                              <div class="form-group has-error">
-                                  <label class="col-sm-2 control-label col-lg-2" for="inputError">Input with error</label>
-                                  <div class="col-lg-10">
-                                      <input type="text" class="form-control" id="inputError">
-                                  </div>
-                              </div>
-                          </form>
-          			</div><!-- /form-panel -->
-          		</div><!-- /col-lg-12 -->
-          	</div><!-- /row -->
-          	
-          	<!-- INPUT MESSAGES -->
-          	<div class="row mt">
-          		<div class="col-lg-12">
-          			<div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Checkboxes, Radios & Selects</h4>
-						<div class="checkbox">
-						  <label>
-						    <input type="checkbox" value="">
-						    Option one is this and that&mdash;be sure to include why it's great
-						  </label>
-						</div>
-						
-						<div class="radio">
-						  <label>
-						    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-						    Option one is this and that&mdash;be sure to include why it's great
-						  </label>
-						</div>
-						<div class="radio">
-						  <label>
-						    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-						    Option two can be something else and selecting it will deselect option one
-						  </label>
-						</div>
-						
-						<hr>
-						<label class="checkbox-inline">
-						  <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-						</label>
-						<label class="checkbox-inline">
-						  <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-						</label>
-						
-						<hr>
 
-						<select class="form-control">
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
-						</select>
-						<br>
-						<select multiple class="form-control">
-						  <option>1</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
-						</select>        		
-          			</div><!-- /form-panel -->
-          		</div><!-- /col-lg-12 -->
-          		
-          	<!-- CUSTOM TOGGLES -->
-          		<div class="col-lg-12">
-          			<div class="form-panel">
-                  	  <h4 class="mb"><i class="fa fa-angle-right"></i> Custom Toggles</h4>
-                          <div class="row mt">
-                              <div class="col-sm-6 text-center">
-                                  <input type="checkbox" checked="" data-toggle="switch" />
-                              </div>
-                              <div class="col-sm-6 text-center">
-                                  <input type="checkbox" data-toggle="switch" />
-                              </div>
-                          </div>
-                          <div class="row mt">
-                              <div class="col-sm-6 text-center">
-                                  <div class="switch switch-square"
-                                       data-on-label="<i class=' fa fa-check'></i>"
-                                       data-off-label="<i class='fa fa-times'></i>">
-                                      <input type="checkbox" />
-                                  </div>
-                              </div>
-                              <div class="col-sm-6 text-center">
-                                  <div class="switch switch-square"
-                                       data-on-label="<i class=' fa fa-check'></i>"
-                                       data-off-label="<i class='fa fa-times'></i>">
-                                      <input type="checkbox" checked="" />
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="row mt">
-                              <div class="col-sm-6 text-center">
-                                  <input type="checkbox" disabled data-toggle="switch" />
-                              </div>
-                              <div class="col-sm-6 text-center">
-                                  <input type="checkbox" checked disabled data-toggle="switch" />
-                              </div>
-                          </div>
-          			</div>
-          		</div>
+
+
+
           	</div><!-- /row -->
           	
           	

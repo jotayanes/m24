@@ -15,13 +15,18 @@
 
 
 	//Firts routes...
-	Route::get('/', 'Auth\AuthController@index');
+	Route::get('/', 'PrincipalController@index');
 	Route::resource('index','Auth\AuthController');
 
 	// Authentication routes...
-	Route::get('auth/login', 'Auth\AuthController@getLogin');
-	Route::post('auth/login', 'Auth\AuthController@postLogin');
-	Route::get('auth/logout', 'Auth\AuthController@getLogout');
+	Route::get('login', 'Auth\AuthController@getLogin');
+	Route::post('login', 'Auth\AuthController@postLogin');
+	Route::get('logout', 'Auth\AuthController@getLogout');
+
+	// Registro routes...
+	Route::get('registro', 'Auth\AuthController@getregistro');
+	//Route::post('registro', 'AuthController@postLogin');
+	//Route::get('registro', 'AuthController@getLogout');
 
 	// Registration routes...
 	Route::get('auth/register', 'Auth\AuthController@getRegister');
@@ -29,19 +34,16 @@
 
 	//Registration routes Inmobiliarias...
 	Route::resource('inmobiliaria','InmobiliariasController@index');
-
-	//Registration routes Inmobiliarias...
-	Route::resource('instalaciones','InstalacionesController@index');
 	
-	//Registration routes Inmobiliarias...
+	//Registration routes Mudanzas...
 	Route::resource('mudanzas','MudanzasController@index');			
 
-	//Registration routes Inmobiliarias...
-	Route::resource('reparaciones','ReparacionesController@index');
+	//Registration routes Transportes...
+	Route::resource('servicios','ServiciosController@index');
 
 	//Registration routes Inmobiliarias...
-	Route::resource('transporte','TransporteController@index');
-
+	Route::resource('lista','PrincipalController@lista');	
+	Route::resource('detalle','PrincipalController@detalle');	
 
 
 

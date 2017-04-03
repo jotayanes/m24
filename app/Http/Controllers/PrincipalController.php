@@ -7,16 +7,25 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class ReparacionesController extends Controller
+class PrincipalController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    protected function index()
     {
-        return view('reparaciones.index');
+        return view('principal.principal');
+    }
+
+    protected function lista()
+    {
+        return view('listados.lista');
+    }
+    protected function detalle()
+    {
+        return view('listados.detalle');
     }
 
     /**
