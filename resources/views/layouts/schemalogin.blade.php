@@ -11,13 +11,13 @@
     <title>Mudate24</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    {!!Html::style('css/bootstrap.css')!!}    
     <!--external css-->
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    {!!Html::style('font-awesome/css/font-awesome.css')!!}
         
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet">
+    {!!Html::style('css/style.css')!!}
+    {!!Html::style('css/style-responsive.css')!!}    
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,12 +35,10 @@
       @yield('content')
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    {!!Html::script('js/jquery.js')!!}
+    {!!Html::script('js/bootstrap.min.js')!!}
+    {!!Html::script('js/jquery.backstretch.min.js')!!}      
 
-    <!--BACKSTRETCH-->
-    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
     <script>
         $.backstretch("img/login-bg.jpg", {speed: 500});
     </script>

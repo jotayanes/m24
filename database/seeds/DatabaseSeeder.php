@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-
+            $this->call(RecursivaSeeder::class);
         // $this->call(UserTableSeeder::class);
 
         Model::reguard();

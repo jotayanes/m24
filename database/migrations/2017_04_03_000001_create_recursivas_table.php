@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateRecursivasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password', 60);
-            $table->rememberToken();
+        Schema::create('recursiva', function (Blueprint $table) {
+            $table->increments('rec_id');
+            $table->string('rec_detalle',255);
+            $table->string('rec_nemonico',5);
+            $table->integer('rec_padre');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('recursiva');
     }
 }

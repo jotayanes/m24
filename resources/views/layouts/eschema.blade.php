@@ -9,17 +9,17 @@
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
     <title>Mudate24</title>
-
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    {!!Html::style('css/bootstrap.css')!!}
     <!--external css-->
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    {!!Html::style('font-awesome/css/font-awesome.css')!!}
         
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style-responsive.css" rel="stylesheet">
-    <link href="js/select2/select2.min.css" rel="stylesheet">
-    <link href="css/table-responsive.css" rel="stylesheet">    
+    {!!Html::style('css/style.css')!!}
+    {!!Html::style('css/style-responsive.css')!!}
+    {!!Html::style('js/select2/select2.min.css')!!}
+    {!!Html::style('css/table-responsive.css')!!}
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -218,18 +218,16 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="js/select2/select2.full.min.js"></script>    
+    {!!Html::script('js/jquery.js')!!}
+    {!!Html::script('js/bootstrap.min.js')!!}
+    {!!Html::script('js/jquery-ui-1.9.2.custom.min.js')!!}
+    {!!Html::script('js/jquery.ui.touch-punch.min.js')!!}
+    {!!Html::script('js/jquery.dcjqaccordion.2.7.js')!!}
+    {!!Html::script('js/jquery.scrollTo.min.js')!!}
+    {!!Html::script('js/jquery.nicescroll.js')!!}
+    {!!Html::script('js/select2/select2.full.min.js')!!}
+    {!!Html::script('js/common-scripts.js')!!}
 
-
-    <!--common script for all pages-->
-    <script src="js/common-scripts.js"></script>
 
     <!--script for this page-->
     

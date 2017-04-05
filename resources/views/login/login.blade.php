@@ -11,12 +11,12 @@
     <div id="login-page">
       <div class="container">
       
-          <form class="form-login" action="#">
+          <form class="form-login" action="login">
             <h2 class="form-login-heading">Inicia Sesión</h2>
             <div class="login-wrap">
-                <input type="text" class="form-control" placeholder="Correo" autofocus>
+                <input type="text" class="form-control" name="correo" id="correo" placeholder="Correo" autofocus>
                 <br>
-                <input type="password" class="form-control" placeholder="Contraseña">
+                <input type="password" class="form-control" name="clave" id="clave" placeholder="Contraseña">
                 <label class="checkbox">
                     <span class="pull-right">
                         <a data-toggle="modal" href="login.html#myModal"> ¿Olvidaste tu Contraseña?</a>

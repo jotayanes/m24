@@ -19,12 +19,12 @@
 	Route::resource('index','Auth\AuthController');
 
 	// Authentication routes...
-	Route::get('login', 'Auth\AuthController@getLogin');
-	Route::post('login', 'Auth\AuthController@postLogin');
-	Route::get('logout', 'Auth\AuthController@getLogout');
+	Route::resource('login', 'UsuariosController@auth');
+	//Route::post('login', 'UsuariosController@postLogin');
+	//Route::get('logout', 'UsuariosController@getLogout');
 
 	// Registro routes...
-	Route::get('registro', 'Auth\AuthController@getregistro');
+	Route::resource('registro', 'UsuariosController@create');
 	//Route::post('registro', 'AuthController@postLogin');
 	//Route::get('registro', 'AuthController@getLogout');
 
