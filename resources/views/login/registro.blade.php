@@ -32,14 +32,23 @@
                               </div>
                               <div class="col-xs-12">
                                 <div class="col-xs-5 col-md-offset-1">
+                                  {!! csrf_field() !!}
+                                  <input type="hidden" name="token" id="token" value="{{ csrf_token() }}">
+                                  <input type="hidden" class="form-control" id="id" placeholder="">
+                                  <label for="">Selecciona tu roll: </label>
+                                    <select class="form-control" id="TUS"  name="TUS"></select>
+                                </div>                              
+                              </div>  
+                              <div class="col-xs-12">
+                                <div class="col-xs-5 col-md-offset-1">
                                   <label for="exampleInputEmail1">Correo</label>
-                                  <input type="text" class="form-control" id="correo" name="correo" placeholder="Ej: nombre@ejemplo.com" >
+                                  <input type="text" class="form-control" id="email" name="email" placeholder="Ej: nombre@ejemplo.com" >
                                 </div>
                                 <div class="col-xs-5 col-md-offset-1">
                                   <label for="exampleInputEmail1">Contraseña</label>
-                                  <input type="text" class="form-control" id="clave" name="clave" placeholder="Entre 6 y 20 caracteres">
+                                  <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Entre 6 y 20 caracteres">
                                 </div>
-                              </div>                                 
+                              </div>    
                               <div class="col-xs-12">
                               </div>                                   
                               <div class="col-xs-12">

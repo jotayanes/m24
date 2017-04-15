@@ -18,6 +18,10 @@ class CreateUsuariosHasServiciosTable extends Migration
             $table->foreign('uhs_usu_id')->references('id')->on('users');   
             $table->integer('uhs_ser_id')->unsigned();
             $table->foreign('uhs_ser_id')->references('ser_id')->on('servicios');
+            $table->integer('uhs_tipo_rec_id')->unsigned();
+            $table->foreign('uhs_tipo_rec_id')->references('rec_id')->on('recursiva');            
+            $table->integer('uhs_status_rec_id')->unsigned();
+            $table->foreign('uhs_status_rec_id')->references('rec_id')->on('recursiva');
             $table->timestamps();            
         });
     }

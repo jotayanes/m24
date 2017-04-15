@@ -13,38 +13,41 @@
 
 
 
-
 	//Firts routes...
 	Route::get('/', 'PrincipalController@index');
+	Route::resource('busqueda', 'PrincipalController@show');
+
 	Route::resource('index','Auth\AuthController');
+
+	Route::put('select','MainController@select');
+	Route::put('sidebar','MainController@sidebar');
 
 	// Authentication routes...
 	Route::resource('login', 'UsuariosController@auth');
-	//Route::post('login', 'UsuariosController@postLogin');
-	//Route::get('logout', 'UsuariosController@getLogout');
-
-	// Registro routes...
 	Route::resource('registro', 'UsuariosController@create');
-	//Route::post('registro', 'AuthController@postLogin');
-	//Route::get('registro', 'AuthController@getLogout');
-
-	// Registration routes...
-	Route::get('auth/register', 'Auth\AuthController@getRegister');
-	Route::post('auth/register', 'Auth\AuthController@postRegister');
-
-	//Registration routes Inmobiliarias...
-	Route::resource('inmobiliaria','InmobiliariasController@index');
-	
-	//Registration routes Mudanzas...
-	Route::resource('mudanzas','MudanzasController@index');			
-
-	//Registration routes Transportes...
-	Route::resource('servicios','ServiciosController@index');
-
-	//Registration routes Inmobiliarias...
-	Route::resource('lista','PrincipalController@lista');	
-	Route::resource('detalle','PrincipalController@detalle');	
+	Route::get('auth/logout', 'Auth\AuthController@getLogout');
+	Route::resource('solicitar','ServiciosController@solicitaservicio');
+	Route::resource('serviciousuario','ServiciosController@serviciousuario');
 
 
+	Route::group(['middleware' => ['auth']], function () {
+		//USUARIO DEMANDANTE
+		Route::resource('postulaciones', 'UsuariosController@index');//-
+		Route::resource('mispostulaciones', 'UsuariosController@store');//-
+		Route::resource('datosprincipales', 'UsuariosController@datosp');//-		
+		Route::resource('datosadicionales', 'UsuariosController@datosadicionales');//-	--------------------------
+		Route::resource('curriculum', 'UsuariosController@curriculum');//-
+
+		//USURIO ADMINISTRADOR
+		Route::resource('aprousu', 'UsuariosController@aprousu');//-		
+
+		
+		//Registration routes servicios...
+		Route::resource('servicios','ServiciosController@index');//-
+		
+		//Registration routes...
+		Route::resource('lista','PrincipalController@lista');//-no	
+		Route::resource('detalle','PrincipalController@detalle');	
+	});
 
 

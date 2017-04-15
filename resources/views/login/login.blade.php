@@ -11,7 +11,8 @@
     <div id="login-page">
       <div class="container">
       
-          <form class="form-login" action="login">
+          <form class="form-login" action="login" method="post">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
             <h2 class="form-login-heading">Inicia Sesión</h2>
             <div class="login-wrap">
                 <input type="text" class="form-control" name="correo" id="correo" placeholder="Correo" autofocus>
@@ -25,7 +26,7 @@
                 </label>
                 <div class="login-social-link centered">
                     <button class="btn btn-twitter" type="submit"><i class="fa fa-lock"></i> Ingresar</button>
-                    <button class="btn btn-twitter" type="submit"><i class="fa fa-arrow-left"></i> Volver</button>
+                    <button class="btn btn-twitter" type="submit"><i class="fa fa-arrow-left"></i> Volver</a></button>
                 </div>
                 <hr>
                 

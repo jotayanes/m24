@@ -18,6 +18,7 @@ class Recursiva extends Model
      *
      * @var array
      */
+    protected $primaryKey = 'rec_id';    
     protected $fillable = ['rec_detalle', 'rec_nemonico','rec_padre'];
 
     /**

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
+use Auth;
 
 class MainController extends Controller
 {
@@ -24,9 +26,13 @@ class MainController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function select()
     {
-        //
+        $means = DB::select("SELECT * FROM recursiva ORDER BY rec_nemonico;");
+
+        return response()->json(
+             $means
+        );
     }
 
     /**
@@ -35,9 +41,13 @@ class MainController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function sidebar()
+    {     
+        $sidebar = DB::select("SELECT * FROM mudate24bd.recursiva where rec_nemonico = 'SER' or rec_nemonico ='TSE' ORDER BY rec_nemonico, rec_detalle;");
+
+        return response()->json(
+            $sidebar
+        );
     }
 
     /**

@@ -14,10 +14,10 @@ class CreatePersonasTable extends Migration
     {
         Schema::create('personas', function (Blueprint $table) {
             $table->increments('per_id');
-            $table->string('per_nombre',145);
-            $table->string('per_apellido',145);
-            $table->string('per_ci',45);
-            $table->string('per_telefono',45);
+            $table->string('per_nombre');
+            $table->string('per_apellido');
+            $table->string('per_ci');
+            $table->string('per_telefono');
             $table->timestamps();            
         });
     }

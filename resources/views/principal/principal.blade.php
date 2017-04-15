@@ -1,33 +1,4 @@
 @extends('layouts.eschema')
-
-    <!--sidebar start-->
-  @section('sidebar') 
-      <aside>
-          <div id="sidebar"  class="nav-collapse " >
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              
-                  <p class="centered"><a href="profile.html"><img src="img/m24c.png" class="" width="80"></a></p>
-                  <h5 class="centered"></h5>                                                            
-                  <li class="sub-menu">
-                      <a href="">
-                          <i class="fa fa-sun-o" ></i>
-                          <span>Admin de Servicios</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="inmobiliaria"><i class="fa fa-building-o"></i>Inmobiliaria</a></li>
-                          <li><a  href="transporte"><i class="fa fa-cab"></i>Transporte</a></li>
-                          <li><a  href="mudanzas"><i class="fa fa-truck"></i>Mudanzas</a></li>                                                    
-                      </ul>                      
-                  </li>
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
-  @parent 
-@endsection  
-
   @section('content') 
 
       <!-- Modal -->
@@ -186,10 +157,10 @@
     
 
 
-    <!--script for this page-->
-    <script src="js/sparkline-chart.js"></script>    
-  <script src="js/zabuto_calendar.js"></script>  
+    <!--script for this page--> 
   
+
+    
 
 
       <!--main content end-->

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use DB;
+use Auth;
 
 class PrincipalController extends Controller
 {
@@ -16,12 +18,26 @@ class PrincipalController extends Controller
      */
     protected function index()
     {
-        return view('principal.principal');
+
+        $tipo = $serv = DB::select("SELECT * FROM mudate24bd.recursiva where rec_nemonico = 'SER' or rec_nemonico ='TSE' ORDER BY rec_nemonico, rec_detalle;");
+        return view('principal.principal', compact('serv','tipo'));
     }
 
-    protected function lista()
+    protected function lista($id)
     {
-        return view('listados.lista');
+        $value =   DB::select("SELECT servicios.*, Ser.rec_detalle AS ser_service, Tipo.rec_detalle AS ser_tipo, 
+                    Parroquia.rec_detalle AS ser_parroquia , Estado.rec_detalle AS ser_estado, Municipio.rec_detalle AS ser_municipio , Pais.rec_detalle AS ser_pais
+                    FROM servicios 
+                    INNER JOIN recursiva AS Ser ON ser_servicio_rec_id = Ser.rec_id 
+                    INNER JOIN recursiva AS Tipo ON ser_tipo_rec_id = Tipo.rec_id
+                    INNER JOIN recursiva AS Parroquia ON ser_parroquia_rec_id = Parroquia.rec_id
+                    INNER JOIN recursiva AS Municipio ON Parroquia.rec_padre = Municipio.rec_id
+                    INNER JOIN recursiva AS Estado ON Municipio.rec_padre = Estado.rec_id
+                    INNER JOIN recursiva AS Pais ON Estado.rec_padre = Pais.rec_id
+                    where ser_id='".$id."';");
+        return response()->json(
+             $value 
+        );    
     }
     protected function detalle()
     {
@@ -55,9 +71,11 @@ class PrincipalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        
+        $tipo = $serv = DB::select("SELECT * FROM mudate24bd.recursiva where rec_nemonico = 'SER' or rec_nemonico ='TSE' ORDER BY rec_nemonico, rec_detalle;");
+        return view('principal.busqueda', compact('serv','tipo'));
     }
 
     /**

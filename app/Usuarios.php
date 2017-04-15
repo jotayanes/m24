@@ -18,6 +18,7 @@ class Usuarios extends Model
      *
      * @var array
      */
+    protected $primaryKey = 'id';    
     protected $fillable = ['email', 'password','usu_tipo_rec_id','usu_status_rec_id','usu_per_id'];
 
     /**
@@ -25,5 +26,5 @@ class Usuarios extends Model
      *
      * @var array
      */
-    protected $hidden = ['usu_tipo_rec_id', 'usu_status_rec_id'];
+    //protected $hidden = ['usu_tipo_rec_id', 'usu_status_rec_id'];
 }

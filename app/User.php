@@ -28,6 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
+    protected $primaryKey = 'id';
     protected $fillable = ['email', 'password','usu_tipo_rec_id','usu_status_rec_id','usu_per_id'];
 
     /**
@@ -35,5 +36,5 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];
+    //protected $hidden = ['password', 'remember_token'];
 }

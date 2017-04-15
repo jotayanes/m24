@@ -14,8 +14,8 @@ class CreateRecursivasTable extends Migration
     {
         Schema::create('recursiva', function (Blueprint $table) {
             $table->increments('rec_id');
-            $table->string('rec_detalle',255);
-            $table->string('rec_nemonico',5);
+            $table->string('rec_detalle');
+            $table->string('rec_nemonico');
             $table->integer('rec_padre');
             $table->timestamps();
         });

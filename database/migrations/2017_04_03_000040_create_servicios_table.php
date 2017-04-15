@@ -18,9 +18,11 @@ class CreateServiciosTable extends Migration
             $table->foreign('ser_servicio_rec_id')->references('rec_id')->on('recursiva');  
             $table->integer('ser_tipo_rec_id')->unsigned();
             $table->foreign('ser_tipo_rec_id')->references('rec_id')->on('recursiva');             
-            $table->string('ser_detalle',50);
+            $table->string('ser_titulo');
             $table->text('ser_descripcion');
-            $table->string('ser_info_adicional',45);
+            $table->string('ser_info_adicional');
+            $table->string('ser_correo')->nullable();
+            $table->string('ser_direccion');
             $table->integer('ser_parroquia_rec_id')->unsigned();
             $table->foreign('ser_parroquia_rec_id')->references('rec_id')->on('recursiva');
             $table->timestamps();    
